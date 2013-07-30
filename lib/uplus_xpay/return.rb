@@ -18,7 +18,7 @@ module UplusXpay
     alias :succeed? :success?
 
     def valid?
-      hash_data = Digest::MD5.hexdigest("#{parsed_resp['LGD_MID']}#{parsed_resp['LGD_OID']}#{parsed_resp["LGD_AMOUNT"]}#{parsed_resp['LGD_RESPCODE']}#{parsed_resp['LGD_TIMESTAMP']}#{config.mertkey(lgd_mid)}")
+      hash_data = Digest::MD5.hexdigest("#{parsed_resp['LGD_MID']}#{parsed_resp['LGD_OID']}#{parsed_resp["LGD_AMOUNT"]}#{parsed_resp['LGD_RESPCODE']}#{parsed_resp['LGD_TIMESTAMP']}#{config.lgd_mid_value(lgd_mid)}")
       hash_data == parsed_resp["LGD_HASHDATA"]
     rescue
       false
