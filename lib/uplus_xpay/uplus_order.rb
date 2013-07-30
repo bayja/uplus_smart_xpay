@@ -2,10 +2,9 @@
 
 module UplusXpay
   class UplusOrder
-    attr_reader :my_order, :config_options
+    attr_reader :config_options
 
-    def initialize(my_order, config_options)
-      @my_order = my_order
+    def initialize(config_options)
       @config_options = config_options
     end
 
