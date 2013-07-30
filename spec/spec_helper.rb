@@ -1,0 +1,1 @@
+require 'uplus_xpay'
