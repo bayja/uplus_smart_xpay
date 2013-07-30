@@ -1,3 +1,4 @@
+# encoding: utf-8
 
 require "uplus_xpay/version"
 require 'uplus_xpay/configuration'

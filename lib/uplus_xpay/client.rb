@@ -1,4 +1,5 @@
 # encoding: utf-8
+require 'httparty'
 
 module UplusXpay
   class Client
@@ -31,9 +32,7 @@ module UplusXpay
     private
 
     def lgd_mid
-      result = cst_mid
-      result = "t" + cst_mid if cst_platform == "test"
-      result
+      config.lgd_mid
     end
 
     def txname
@@ -48,7 +47,7 @@ module UplusXpay
     end
 
     def auth_code
-      Digest::SHA1.hexdigest(tx_id + config.lgd_mertkey(lgd_mid))
+      Digest::SHA1.hexdigest(tx_id + config.lgd_mid_value(lgd_mid))
     end
 
     def get_unique

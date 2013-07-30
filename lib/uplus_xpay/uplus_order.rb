@@ -13,7 +13,7 @@ module UplusXpay
     end
 
     def lgd_hashdata
-      Digest::MD5.hexdigest(UplusXpay.lgd_mid + lgd_oid + lgd_amount + lgd_timestamp + UplusXpay.lgd_mertkey)
+      Digest::MD5.hexdigest(config.lgd_mid + lgd_oid + lgd_amount + lgd_timestamp + config.lgd_mertkey)
     end
 
     def lgd_buyerip
@@ -25,6 +25,10 @@ module UplusXpay
       define_method meth do
         config_options[meth]
       end
+    end
+
+    def config
+      Configuration
     end
   end
 end

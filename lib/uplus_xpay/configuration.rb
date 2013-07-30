@@ -16,6 +16,15 @@ module UplusXpay
       cst_platform == 'service' ? cst_mid : "t#{cst_mid}"
     end
 
+    def self.lgd_mid_value(lgd_mid)
+      lgd_mid_values.fetch(lgd_mid.to_sym)
+    end
+
+    def self.url(cst_platform)
+      urls.fetch(cst_platform.to_sym)
+    end
+
+
     def self.casnoteurl
       "..."
     end
