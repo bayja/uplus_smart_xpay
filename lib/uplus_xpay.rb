@@ -1,3 +1,4 @@
+
 require "uplus_xpay/version"
 require 'uplus_xpay/configuration'
 require 'uplus_xpay/client'
@@ -22,6 +23,10 @@ module UplusXpay
     Configuration.cst_mid
   end
 
+  def self.server_id
+    Configuration.server_id
+  end
+
   def self.lgd_mid
     Configuration.lgd_mid
   end
@@ -30,8 +35,19 @@ module UplusXpay
     Configuration.lgd_mertkey
   end
 
+  def self.time_out
+    Configuration.time_out
+  end
+
+  def self.urls
+    Configuration.urls
+  end
+
+  def self.lgd_mid_values
+    Configuration.lgd_mid_values
+  end
+
   def self.casnoteurl
     Configuration.casnoteurl
   end
-
 end

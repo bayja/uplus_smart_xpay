@@ -7,6 +7,17 @@ describe UplusXpay do
       config.cst_mid = "mintshop"
       config.lgd_mertkey = "XXXX00000XXXXX99999"
       config.cst_platform = "test"
+      config.server_id = "01"
+      config.time_out = "60"
+      config.urls = {
+        real: "https://xpayclient.lgdacom.net/xpay/Gateway.do",
+        test: "https://xpayclient.lgdacom.net:7443/xpay/Gateway.do",
+        aux: "http://xpayclient.lgdacom.net:7080/xpay/Gateway.do",
+      }
+      config.lgd_mid_values = {
+        tmintshop: "99999XXXX00000",
+        mintshop: "99999XXXX00000",
+      }
     end
   end
 
@@ -15,6 +26,17 @@ describe UplusXpay do
       UplusXpay.cst_mid.should == "mintshop"
       UplusXpay.lgd_mertkey.should == "XXXX00000XXXXX99999"
       UplusXpay.cst_platform.should == "test"
+      UplusXpay.server_id.should == '01'
+      UplusXpay.time_out.should == '60'
+      UplusXpay.urls.should == {
+        real: "https://xpayclient.lgdacom.net/xpay/Gateway.do",
+        test: "https://xpayclient.lgdacom.net:7443/xpay/Gateway.do",
+        aux: "http://xpayclient.lgdacom.net:7080/xpay/Gateway.do",
+      }
+      UplusXpay.lgd_mid_values == {
+        tmintshop: "99999XXXX00000",
+        mintshop: "99999XXXX00000",
+      }
     end
 
     it 'can find uplus_js_host' do

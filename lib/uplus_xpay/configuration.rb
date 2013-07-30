@@ -1,7 +1,7 @@
 module UplusXpay
   class Configuration
     class << self
-      attr_accessor :cst_mid, :lgd_mertkey
+      attr_accessor :cst_mid, :lgd_mertkey, :server_id, :time_out, :urls, :lgd_mid_values
     end
 
     def self.cst_platform=(platform)
