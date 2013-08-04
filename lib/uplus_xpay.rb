@@ -44,8 +44,8 @@ module UplusXpay
     Configuration.urls
   end
 
-  def self.lgd_mid_values
-    Configuration.lgd_mid_values
+  def self.mertkeys
+    Configuration.mertkeys
   end
 
   def self.casnoteurl

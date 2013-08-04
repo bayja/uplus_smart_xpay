@@ -1,2 +1,17 @@
 # {"CST_PLATFORM"=>"test", "CST_MID"=>"mintshop", "LGD_MID"=>"tmintshop", "LGD_OID"=>"oid_1234", "LGD_BUYER"=>"이름", "LGD_PRODUCTINFO"=>"상품정보", "LGD_AMOUNT"=>"123000", "LGD_BUYEREMAIL"=>"abc@mintshop.com", "LGD_CUSTOM_SKIN"=>"blue", "LGD_CUSTOM_PROCESSTYPE"=>"TWOTR", "LGD_TIMESTAMP"=>"20130730140741", "LGD_HASHDATA"=>"9b0a7f1b94256856b6668def5a686360", "LGD_PAYKEY"=>"", "LGD_VERSION"=>"PHP_XPay_1.1", "LGD_BUYERIP"=>"", "LGD_BUYERID"=>"1234"}
-
+# {"cst_platform"=>"test",
+#  "cst_mid"=>"mintshop",
+#  "lgd_mid"=>"tmintshop",
+#  "lgd_oid"=>"oid_1234",
+#  "lgd_buyer"=>"이름",
+#  "lgd_productinfo"=>"상품정보",
+#  "lgd_amount"=>"123000",
+#  "lgd_buyeremail"=>"abc@mintshop.com",
+#  "lgd_custom_skin"=>"blue",
+#  "lgd_custom_processtype"=>"TWOTR",
+#  "lgd_timestamp"=>"20130730140734",
+#  "lgd_hashdata"=>"3a7c60942dc977479dcc5c816e77f152",
+#  "lgd_paykey"=>"",
+#  "lgd_version"=>"PHP_XPay_1.1",
+#  "lgd_buyerip"=>"",
+#  "lgd_buyerid"=>"1234"}

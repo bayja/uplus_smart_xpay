@@ -14,7 +14,7 @@ describe UplusXpay do
         test: "https://xpayclient.lgdacom.net:7443/xpay/Gateway.do",
         aux: "http://xpayclient.lgdacom.net:7080/xpay/Gateway.do",
       }
-      config.lgd_mid_values = {
+      config.mertkeys = {
         tmintshop: "99999XXXX00000",
         mintshop: "99999XXXX00000",
       }
@@ -33,7 +33,7 @@ describe UplusXpay do
         test: "https://xpayclient.lgdacom.net:7443/xpay/Gateway.do",
         aux: "http://xpayclient.lgdacom.net:7080/xpay/Gateway.do",
       }
-      UplusXpay.lgd_mid_values == {
+      UplusXpay.mertkeys == {
         tmintshop: "99999XXXX00000",
         mintshop: "99999XXXX00000",
       }
