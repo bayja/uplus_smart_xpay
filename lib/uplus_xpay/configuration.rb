@@ -21,7 +21,10 @@ module UplusXpay
     end
 
     def self.url(cst_platform)
-      urls.fetch(cst_platform.to_sym)
+      case cst_platform
+      when "service" then urls.fetch("url")
+      when "test" then urls.fetch("test_url")
+      end
     end
 
 

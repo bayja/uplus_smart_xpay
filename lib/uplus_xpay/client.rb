@@ -11,7 +11,7 @@ module UplusXpay
 
     def initialize(options)
       normalize_options!(options)
-      @cst_platform = options.fetch(:cst_platform) { :service }
+      @cst_platform = options.fetch(:cst_platform) { "service" }
       @cst_mid = options.fetch(:cst_mid)
       @lgd_paykey = options.fetch(:lgd_paykey)
     end

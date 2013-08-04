@@ -10,13 +10,13 @@ describe UplusXpay do
       config.server_id = "01"
       config.time_out = "60"
       config.urls = {
-        real: "https://xpayclient.lgdacom.net/xpay/Gateway.do",
-        test: "https://xpayclient.lgdacom.net:7443/xpay/Gateway.do",
-        aux: "http://xpayclient.lgdacom.net:7080/xpay/Gateway.do",
+        url: "https://xpayclient.lgdacom.net/xpay/Gateway.do",
+        test_url: "https://xpayclient.lgdacom.net:7443/xpay/Gateway.do",
+        aux_url: "http://xpayclient.lgdacom.net:7080/xpay/Gateway.do",
       }
       config.mertkeys = {
-        tmintshop: "99999XXXX00000",
-        mintshop: "99999XXXX00000",
+        tmintshop: "XXXX00000XXXXX99999",
+        mintshop: "XXXX00000XXXXX99999",
       }
     end
   end
@@ -29,13 +29,13 @@ describe UplusXpay do
       UplusXpay.server_id.should == '01'
       UplusXpay.time_out.should == '60'
       UplusXpay.urls.should == {
-        real: "https://xpayclient.lgdacom.net/xpay/Gateway.do",
-        test: "https://xpayclient.lgdacom.net:7443/xpay/Gateway.do",
-        aux: "http://xpayclient.lgdacom.net:7080/xpay/Gateway.do",
+        url: "https://xpayclient.lgdacom.net/xpay/Gateway.do",
+        test_url: "https://xpayclient.lgdacom.net:7443/xpay/Gateway.do",
+        aux_url: "http://xpayclient.lgdacom.net:7080/xpay/Gateway.do",
       }
       UplusXpay.mertkeys == {
-        tmintshop: "99999XXXX00000",
-        mintshop: "99999XXXX00000",
+        tmintshop: "XXXX00000XXXXX99999",
+        mintshop: "XXXX00000XXXXX99999",
       }
     end
 
