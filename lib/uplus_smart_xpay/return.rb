@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-module UplusXpay
+module UplusSmartXpay
   class Return
     attr_reader :lgd_mid, :parsed_resp, :lgd_respcode, :lgd_respmsg, :lgd_response
 

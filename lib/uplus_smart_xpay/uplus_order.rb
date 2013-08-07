@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-module UplusXpay
+module UplusSmartXpay
   class UplusOrder
     attr_reader :config_options
 

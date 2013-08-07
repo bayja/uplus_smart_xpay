@@ -1,4 +1,4 @@
-module UplusXpay
+module UplusSmartXpay
   class Configuration
     class << self
       attr_accessor :cst_mid, :lgd_mertkey, :server_id, :time_out, :urls, :mertkeys

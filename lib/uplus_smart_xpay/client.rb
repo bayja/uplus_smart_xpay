@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'httparty'
 
-module UplusXpay
+module UplusSmartXpay
   class Client
     attr_reader :cst_platform, :cst_mid, :lgd_paykey
 

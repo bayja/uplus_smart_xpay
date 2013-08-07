@@ -1,4 +1,4 @@
-# UplusXpay
+# UplusSmartXpay
 
 TODO: Write a gem description
 
@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'uplus_xpay'
+    gem 'uplus_smart_xpay'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install uplus_xpay
+    $ gem install uplus_smart_xpay
 
 ## Usage
 

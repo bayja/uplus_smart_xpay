@@ -1,19 +1,19 @@
 # encoding: utf-8
 
-require "uplus_xpay/version"
-require 'uplus_xpay/configuration'
-require 'uplus_xpay/client'
-require 'uplus_xpay/return'
-require 'uplus_xpay/uplus_order'
+require "uplus_smart_xpay/version"
+require 'uplus_smart_xpay/configuration'
+require 'uplus_smart_xpay/client'
+require 'uplus_smart_xpay/return'
+require 'uplus_smart_xpay/uplus_order'
 
-module UplusXpay
+module UplusSmartXpay
   def self.configure
     yield Configuration
   end
 
   def self.uplus_js_host
     # TODO: ssh 접속 처리 추가할 것!
-    UplusXpay.cst_platform == 'service' ? "http://xpay.uplus.co.kr" : "http://xpay.uplus.co.kr:7080"
+    UplusSmartXpay.cst_platform == 'service' ? "http://xpay.uplus.co.kr" : "http://xpay.uplus.co.kr:7080"
   end
 
   def self.cst_platform

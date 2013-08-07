@@ -1,1 +1,1 @@
-require 'uplus_xpay'
+require 'uplus_smart_xpay'

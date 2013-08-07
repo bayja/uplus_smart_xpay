@@ -1,9 +1,9 @@
 # encoding: utf-8
 require 'spec_helper'
 
-describe UplusXpay do
+describe UplusSmartXpay do
   before do
-    UplusXpay.configure do |config|
+    UplusSmartXpay.configure do |config|
       config.cst_mid = "mintshop"
       config.lgd_mertkey = "XXXX00000XXXXX99999"
       config.cst_platform = "test"
@@ -23,35 +23,35 @@ describe UplusXpay do
 
   context 'configuration' do
     it 'can config' do
-      UplusXpay.cst_mid.should == "mintshop"
-      UplusXpay.lgd_mertkey.should == "XXXX00000XXXXX99999"
-      UplusXpay.cst_platform.should == "test"
-      UplusXpay.server_id.should == '01'
-      UplusXpay.time_out.should == '60'
-      UplusXpay.urls.should == {
+      UplusSmartXpay.cst_mid.should == "mintshop"
+      UplusSmartXpay.lgd_mertkey.should == "XXXX00000XXXXX99999"
+      UplusSmartXpay.cst_platform.should == "test"
+      UplusSmartXpay.server_id.should == '01'
+      UplusSmartXpay.time_out.should == '60'
+      UplusSmartXpay.urls.should == {
         url: "https://xpayclient.lgdacom.net/xpay/Gateway.do",
         test_url: "https://xpayclient.lgdacom.net:7443/xpay/Gateway.do",
         aux_url: "http://xpayclient.lgdacom.net:7080/xpay/Gateway.do",
       }
-      UplusXpay.mertkeys == {
+      UplusSmartXpay.mertkeys == {
         tmintshop: "XXXX00000XXXXX99999",
         mintshop: "XXXX00000XXXXX99999",
       }
     end
 
     it 'can find uplus_js_host' do
-      UplusXpay::Configuration.cst_platform = 'service'
-      UplusXpay.uplus_js_host.should == "http://xpay.uplus.co.kr"
+      UplusSmartXpay::Configuration.cst_platform = 'service'
+      UplusSmartXpay.uplus_js_host.should == "http://xpay.uplus.co.kr"
 
-      UplusXpay::Configuration.cst_platform = 'test'
-      UplusXpay.uplus_js_host.should == "http://xpay.uplus.co.kr:7080"
+      UplusSmartXpay::Configuration.cst_platform = 'test'
+      UplusSmartXpay.uplus_js_host.should == "http://xpay.uplus.co.kr:7080"
     end
 
     it 'can fetch lgd_mid' do
-      UplusXpay.lgd_mid.should == 'tmintshop'
+      UplusSmartXpay.lgd_mid.should == 'tmintshop'
 
-      UplusXpay::Configuration.cst_platform = 'service'
-      UplusXpay.lgd_mid.should == 'mintshop'
+      UplusSmartXpay::Configuration.cst_platform = 'service'
+      UplusSmartXpay.lgd_mid.should == 'mintshop'
     end
   end
 end

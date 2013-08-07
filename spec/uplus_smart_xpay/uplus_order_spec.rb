@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'spec_helper'
 
-describe UplusXpay::UplusOrder do
+describe UplusSmartXpay::UplusOrder do
   let(:config_options) do
     {
       lgd_buyer: 'my_name',
@@ -16,7 +16,7 @@ describe UplusXpay::UplusOrder do
 
   context 'convert application order to uplus order' do
     it 'can convert basic info' do
-      uplus_order = UplusXpay::UplusOrder.new(config_options)
+      uplus_order = UplusSmartXpay::UplusOrder.new(config_options)
       uplus_order.lgd_buyer.should == "my_name"
       uplus_order.lgd_productinfo.should == "상품정보"
       uplus_order.lgd_amount.should == "14000"
