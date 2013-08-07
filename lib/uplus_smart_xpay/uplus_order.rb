@@ -21,7 +21,7 @@ module UplusSmartXpay
     end
 
     [:lgd_oid, :lgd_buyer, :lgd_productinfo, :lgd_amount,
-     :lgd_buyeremail, :lgd_buyerid, :lgd_buyerip].each do |meth|
+     :lgd_buyeremail, :lgd_buyerid, :lgd_buyerip, :lgd_custom_firstpay].each do |meth|
       define_method meth do
         config_options[meth]
       end
