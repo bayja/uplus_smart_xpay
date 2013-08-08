@@ -23,7 +23,7 @@ RUBY
   end
 
   def generate_controller
-    copy_file "smart_xpay_controller.rb", "app/controllers/uplus_test/smart_xpay_controller.rb"
+    copy_file "smart_xpay_controller.rb", "app/controllers/uplus/smart_xpay_controller.rb"
   end
 
   def generate_views
