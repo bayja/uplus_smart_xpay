@@ -2,7 +2,7 @@ class SmartXpayGenerator < Rails::Generators::Base
   source_root File.expand_path('../templates', __FILE__)
 
   def generate_initializer
-
+    copy_file "initialize_file.rb", "config/initializers/uplus_smart_xpay.rb"
   end
 
   def generate_routes
@@ -27,6 +27,6 @@ RUBY
   end
 
   def generate_views
-    directory "test", "app/views/test"
+    directory "views/uplus", "app/views/uplus"
   end
 end

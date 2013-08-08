@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>LG 유플러스 eCredit서비스 결제테스트</title>
+<script language="javascript" src="http://xpay.uplus.co.kr/xpay/js/xpay_crossplatform.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+/*
+* iframe으로 결제창을 호출하시기를 원하시면 iframe으로 설정 (변수명 수정 불가)
+*/
+    var LGD_window_type = '<%= @cst_window_type %>';
+/*
+* 수정불가
+*/
+function launchCrossPlatform(){
+      lgdwin = open_paymentwindow(document.getElementById('LGD_PAYINFO'), '<%= UplusSmartXpay.cst_platform %>', LGD_window_type);
+}
+/*
+* FORM 명만  수정 가능
+*/
+function getFormObject() {
+        return document.getElementById("LGD_PAYINFO");
+}
+
+</script>
+</head>
+<body>
+<form method="post" name="LGD_PAYINFO" id="LGD_PAYINFO" action="">
+<table>
+    <tr>
+        <td>구매자 이름 </td>
+        <td><%= @uplus_order.lgd_buyer %></td>
+    </tr>
+    <tr>
+        <td>상품정보 </td>
+        <td><%= @uplus_order.lgd_productinfo %></td>
+    </tr>
+    <tr>
+        <td>결제금액 </td>
+        <td><%= @uplus_order.lgd_amount %></td>
+    </tr>
+    <tr>
+        <td>구매자 이메일 </td>
+        <td><%= @uplus_order.lgd_buyeremail %></td>
+    </tr>
+    <tr>
+        <td>주문번호 </td>
+        <td><%= @uplus_order.lgd_oid %></td>
+    </tr>
+    <tr>
+        <td colspan="2">* 추가 상세 결제요청 파라미터는 메뉴얼을 참조하시기 바랍니다.</td>
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+        <input type="button" value="인증요청" onclick="launchCrossPlatform();"/>
+        </td>
+    </tr>
+</table>
+  <% @payment_data.each do |key, value| %>
+    <%= hidden_field_tag key, value %>
+  <% end %>
+</form>
+</body>
+</html>
+

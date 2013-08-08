@@ -1,0 +1,17 @@
+<html>
+<head>
+  <script type="text/javascript">
+    function setLGDResult() {
+      document.getElementById('LGD_PAYINFO').submit();
+    }
+  </script>
+</head>
+<body onload="setLGDResult()">
+  <form method="post" name="LGD_PAYINFO" id="LGD_PAYINFO" action="<%= uplus_smart_xpay_pay_res_url %>">
+     <% @payment_data.each_pair do |key, value| %>
+       <%= text_field_tag key, value %>
+     <% end %>
+  </form>
+
+</body>
+</html>

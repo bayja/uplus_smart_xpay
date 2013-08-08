@@ -13,13 +13,12 @@ module Uplus
       @lgd_kvpmispautoappyn = "Y"
 
       @uplus_order = UplusSmartXpay::UplusOrder.new({
-        lgd_buyer: "이름",
-        lgd_productinfo: 'test 상품 106',
-        lgd_amount: '13300',
+        lgd_buyer: "개똥이",
+        lgd_productinfo: 'test 상품 201',
+        lgd_amount: '20100',
         lgd_buyeremail: 'abc@mintshop.com',
         lgd_buyerid: '1234',
-        # lgd_oid: "oid_#{Random.rand(20000)}",
-        lgd_oid: "test_oid_106",
+        lgd_oid: "test_oid_201",
         lgd_buyerip: '2.2.1.1',
         lgd_custom_firstpay: "SC0010", #신용카드
       })
@@ -60,24 +59,19 @@ module Uplus
 
 
     def pay_res
-      # {"LGD_CARDACQUIRER"=>"41", "LGD_MID"=>"tmintshop", "LGD_FINANCENAME"=>"신한MASTER", "LGD_PCANCELFLAG"=>"1", "LGD_FINANCEAUTHNUM"=>"00000000", "LGD_DELIVERYINFO"=>"", "LGD_BUYER"=>"이름", "LGD_AFFILIATECODE"=>"AGB03M", "LGD_TRANSAMOUNT"=>"1210", "LGD_BUYERID"=>"", "LGD_OID"=>"test_oid_5", "LGD_CARDNUM"=>"510737******5469", "LGD_RECEIVERPHONE"=>"", "LGD_TID"=>"tmint2013080712200921906", "LGD_CLOSEDATE"=>"", "LGD_TIMESTAMP"=>"20130807122010", "LGD_FINANCECODE"=>"41200", "LGD_CARDNOINTYN"=>"0", "LGD_PCANCELSTR"=>"0", "LGD_BUYERPHONE"=>"", "LGD_ESCROWYN"=>"N", "LGD_RETURNURL"=>"http://57qg.localtunnel.com/uplus/return_url", "LGD_PAYTYPE"=>"SC0010", "LGD_AMOUNT"=>"1210", "LGD_VANCODE"=>"van0012", "LGD_EXCHANGERATE"=>"1.0", "LGD_BUYERSSN"=>"", "LGD_CARDINSTALLMONTH"=>"00", "LGD_RESPMSG"=>"결제성공", "LGD_PAYDATE"=>"20130807122009", "LGD_PRODUCTINFO"=>"상품정보", "LGD_PRODUCTCODE"=>"", "LGD_HASHDATA"=>"886b2663b3e769d80e34c552de8097bb", "LGD_CARDGUBUN1"=>"0", "LGD_CARDGUBUN2"=>"1", "LGD_BUYERADDRESS"=>"", "LGD_BUYERIP"=>"211.201.212.22", "LGD_RECEIVER"=>"", "LGD_RESPCODE"=>"0000", "LGD_BUYEREMAIL"=>"abc@mintshop.com"}
       uplus_return = UplusSmartXpay::Client.call(params)
 
       unless uplus_return.succeed?
-        puts "결제 실패 ......................... "
-        puts uplus_return.inspect
         return # 결제 실패 처리
       end
 
       order_detail = uplus_return.order_params
-      puts "order_detail ......................... "
-      puts order_detail
-      # my_order = MyOrder.new(order_detail)
-      # if my_order.save
+      my_order = MyOrder.new(order_detail)
+      if my_order.save
         # 성공 처리
-      # else
+      else
         # 결제 성공, but local db 저장 실패
-      # end
+      end
     end
 
     def cas_note_url
