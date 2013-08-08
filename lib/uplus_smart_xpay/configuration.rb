@@ -1,7 +1,11 @@
 module UplusSmartXpay
   class Configuration
     class << self
-      attr_accessor :cst_mid, :lgd_mertkey, :server_id, :time_out, :urls, :mertkeys
+      attr_accessor :cst_mid, :server_id, :time_out, :urls, :mertkeys
+    end
+
+    def self.lgd_mertkey
+      @lgd_mertkey ||= mertkey(lgd_mid)
     end
 
     def self.cst_platform=(platform)

@@ -5,7 +5,6 @@ describe UplusSmartXpay do
   before do
     UplusSmartXpay.configure do |config|
       config.cst_mid = "mintshop"
-      config.lgd_mertkey = "XXXX00000XXXXX99999"
       config.cst_platform = "test"
       config.server_id = "01"
       config.time_out = "60"

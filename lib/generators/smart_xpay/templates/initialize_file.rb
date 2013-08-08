@@ -1,6 +1,5 @@
 UplusSmartXpay.configure do |config|
   config.cst_mid = "YOUR_CST_MID"
-  config.lgd_mertkey = "YOUR_MERTKEY"
   config.cst_platform = "test"
   config.server_id = "01"
   config.time_out = "60"
