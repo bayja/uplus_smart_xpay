@@ -9,7 +9,7 @@ UplusSmartXpay.configure do |config|
     aux_url: "http://xpayclient.lgdacom.net:7080/xpay/Gateway.do",
   }
   config.mertkeys = {
-    tmintshop: "YOUR_MERTKEY"
+    tmintshop: "YOUR_MERTKEY",
     mintshop: "YOUR_MERTKEY",
   }
 end
