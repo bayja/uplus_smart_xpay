@@ -7,7 +7,7 @@ module Uplus
 
     def pay_req_cross_platform
       @lgd_custom_skin = "blue"
-      @custom_processtype = "TWOTR"
+      @lgd_custom_processtype = "TWOTR"
       @cst_window_type = "submit"
       @lgd_custom_rollback = "Y"
       @lgd_kvpmispautoappyn = "Y"
@@ -65,7 +65,7 @@ module Uplus
         return # 결제 실패 처리
       end
 
-      order_detail = uplus_return.order_params
+      order_detail = uplus_return.parsed_resp
       my_order = MyOrder.new(order_detail)
       if my_order.save
         # 성공 처리

@@ -26,8 +26,8 @@ module UplusSmartXpay
 
     def self.url(cst_platform)
       case cst_platform
-      when "service" then urls.fetch("url")
-      when "test" then urls.fetch("test_url")
+      when "service" then urls.fetch(:url)
+      when "test" then urls.fetch(:test_url)
       end
     end
 
