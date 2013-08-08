@@ -47,7 +47,7 @@ module UplusSmartXpay
     end
 
     def auth_code
-      Digest::SHA1.hexdigest(tx_id + config.mertkeys(lgd_mid))
+      Digest::SHA1.hexdigest(tx_id + config.mertkey(lgd_mid))
     end
 
     def get_unique
