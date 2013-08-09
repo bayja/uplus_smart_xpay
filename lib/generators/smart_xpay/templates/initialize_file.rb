@@ -1,6 +1,6 @@
 UplusSmartXpay.configure do |config|
   config.cst_mid = "YOUR_CST_MID"
-  config.cst_platform = "test"
+  config.cst_platform = Rails.env.production? ? "service" : "test"
   config.server_id = "01"
   config.time_out = "60"
   config.urls = {

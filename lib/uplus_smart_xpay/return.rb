@@ -2,11 +2,12 @@
 
 module UplusSmartXpay
   class Return
-    attr_reader :lgd_mid, :parsed_resp, :lgd_respcode, :lgd_respmsg, :lgd_response
+    attr_reader :lgd_mid, :parsed_resp, :lgd_respcode, :lgd_respmsg, :lgd_response, :lgd_oid
 
     def initialize(lgd_mid, parsed_resp)
       @lgd_mid = lgd_mid
       @parsed_resp = parsed_resp
+      @lgd_oid = parsed_resp["LGD_OID"]
       @lgd_respcode = parsed_resp["LGD_RESPCODE"]
       @lgd_respmsg = parsed_resp["LGD_RESPMSG"]
       @lgd_response = parsed_resp["LGD_RESPONSE"]
